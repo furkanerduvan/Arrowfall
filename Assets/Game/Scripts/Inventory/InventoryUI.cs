@@ -1,0 +1,15 @@
+using UnityEngine;
+
+public class InventoryUI : MonoBehaviour
+{
+    [SerializeField] private InventorySlotUI[] uiSlots;
+    public ItemTooltipUI TooltipUI;
+
+    public void UpdateUI(ItemSlot[] items)
+    {
+         for(int i = 0; i < uiSlots.Length; i++)
+        {
+            uiSlots[i].SetItemSlot(items[i]);
+        }
+    }
+}
